@@ -1,6 +1,7 @@
 #
 # Makefile for RTC class/drivers.
 #
+KCOV_INSTRUMENT		:= n
 
 ccflags-$(CONFIG_RTC_DEBUG)	:= -DDEBUG
 

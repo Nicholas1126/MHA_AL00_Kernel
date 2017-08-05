@@ -1,5 +1,7 @@
 # generic pinmux support
 
+KCOV_INSTRUMENT		:= n
+
 subdir-ccflags-$(CONFIG_DEBUG_PINCTRL)	+= -DDEBUG
 
 obj-$(CONFIG_PINCTRL)		+= core.o pinctrl-utils.o

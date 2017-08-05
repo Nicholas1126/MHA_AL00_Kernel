@@ -1,4 +1,6 @@
 # UFSHCD makefile
+KCOV_INSTRUMENT		:= n
+
 obj-$(CONFIG_SCSI_UFS_KIRIN) += ufs-kirin.o ufs_kirin_spec_log.o ufs_kirin_rdr.o
 obj-$(CONFIG_SCSI_UFS_QCOM) += ufs-qcom.o
 obj-$(CONFIG_SCSI_UFSHCD) += ufshcd.o ufs_quirks.o ufs_kirin_norm_log.o ufs_kirin_norm_stat.o

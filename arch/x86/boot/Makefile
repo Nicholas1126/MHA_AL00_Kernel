@@ -16,6 +16,13 @@
 
 KASAN_SANITIZE := n
 
+# Kernel does not boot with kcov instrumentation here.
+# One of the problems observed was insertion of __sanitizer_cov_trace_pc()
+# callback into middle of per-cpu data enabling code. Thus the callback observed
+# inconsistent state and crashed. We are interested mostly in syscall coverage,
+# so boot code is not interesting anyway.
+KCOV_INSTRUMENT	:= n
+
 SVGA_MODE	:= -DSVGA_MODE=NORMAL_VGA
 
 targets		:= vmlinux.bin setup.bin setup.elf bzImage

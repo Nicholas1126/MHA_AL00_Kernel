@@ -3,6 +3,8 @@
 #
 
 # Build PCI Express ASPM if needed
+KCOV_INSTRUMENT		:= n
+
 obj-$(CONFIG_PCIEASPM)		+= aspm.o
 
 pcieportdrv-y			:= portdrv_core.o portdrv_pci.o portdrv_bus.o

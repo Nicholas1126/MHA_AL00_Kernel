@@ -1,3 +1,5 @@
+KCOV_INSTRUMENT	:= n
+
 obj-$(CONFIG_HISI_HKADC) += adc/
 obj-$(CONFIG_HISI_CCI_EXTRA)		+= cci_extra/
 obj-$(CONFIG_HISI_CMDLINE_PARSE)	+= cmdline/
